@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download kr8</title>
+<meta name="description" content="Download kr8 for Windows and Android. Invite-only preview.">
+<link rel="icon" href="assets/favicon-32.png">
+<style>
+  :root {
+    --bg: hsl(232 23% 12%);
+    --panel: hsl(232 23% 17%);
+    --line: hsl(232 18% 26%);
+    --ink: hsl(220 23% 95%);
+    --muted: hsl(225 12% 72%);
+    --accent: hsl(267 83% 80%);
+    --accent-ink: hsl(232 23% 14%);
+    --warn: hsl(40 90% 70%);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 48px 16px 64px; }
+  header img { height: 56px; width: auto; display: block; }
+  h1 { font-size: 2rem; margin: 24px 0 8px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 32px; max-width: 60ch; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 20px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card h2 { margin: 0; font-size: 1.15rem; }
+  .ver { color: var(--muted); font-size: 0.9rem; min-height: 1.4em; }
+  .btn {
+    display: inline-block; text-align: center; text-decoration: none; font-weight: 600;
+    background: var(--accent); color: var(--accent-ink); padding: 10px 14px; border-radius: 10px;
+  }
+  .btn[aria-disabled="true"] { opacity: 0.45; pointer-events: none; }
+  .small { font-size: 0.85rem; color: var(--muted); }
+  .small a { color: var(--accent); }
+  .note {
+    margin-top: 32px; padding: 14px 16px; border-left: 3px solid var(--warn);
+    background: var(--panel); border-radius: 8px; color: var(--muted); font-size: 0.92rem;
+  }
+  h3 { margin: 36px 0 8px; font-size: 1.05rem; }
+  ol { color: var(--muted); padding-left: 20px; }
+  code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.85em; word-break: break-all; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <header><img src="assets/kr8-logo.png" alt="kr8"></header>
+  <h1>Download kr8</h1>
+  <p class="lede">kr8 is a workspace where creative teams and AI agents share spaces, a canvas and their tools.
+  It is an invite-only preview from Ascent Strategy. Installed copies update themselves from this page's feeds.</p>
+
+  <div class="grid">
+    <section class="card" aria-labelledby="win-h">
+      <h2 id="win-h">Windows</h2>
+      <div class="ver" id="win-ver">Checking the latest version…</div>
+      <a class="btn" id="win-dl" href="#" aria-disabled="true">Download for Windows</a>
+      <div class="small" id="win-sum"></div>
+    </section>
+    <section class="card" aria-labelledby="and-h">
+      <h2 id="and-h">Android</h2>
+      <div class="ver" id="and-ver">Checking the latest version…</div>
+      <a class="btn" id="and-dl" href="#" aria-disabled="true">Download the APK</a>
+      <div class="small" id="and-sum"></div>
+    </section>
+  </div>
+
+  <div class="note">
+    <strong>Preview builds.</strong> The Windows installer is not code-signed yet, so Windows may show
+    “Windows protected your PC”. Choose <em>More info → Run anyway</em> only after checking the file's
+    SHA-256 against the one listed here. The Android app installs outside the Play Store: your phone will ask
+    you to allow installs from your browser once.
+  </div>
+
+  <h3>After installing</h3>
+  <ol>
+    <li>Open kr8 on your computer and join your community with the invite you were given.</li>
+    <li>On your phone, open kr8 and pair it from <em>Settings → Mobile</em> on the computer.</li>
+    <li>Both apps check this page for updates and offer them inside the app.</li>
+  </ol>
+
+  <footer>kr8 · Ascent Strategy · <a href="https://kr8.app" style="color:var(--accent)">kr8.app</a></footer>
+</main>
+<script>
+  async function fill(feed, verId, dlId, sumId, pick) {
+    const ver = document.getElementById(verId), dl = document.getElementById(dlId), sum = document.getElementById(sumId);
+    try {
+      const res = await fetch(feed, { cache: "no-store" });
+      if (!res.ok) throw new Error(String(res.status));
+      const data = await res.json();
+      const info = pick(data);
+      if (!info || !info.url) throw new Error("no build yet");
+      ver.textContent = "Version " + data.version + (data.pub_date ? " · " + new Date(data.pub_date).toLocaleDateString() : "");
+      dl.href = info.url; dl.removeAttribute("aria-disabled");
+      if (info.sha256) sum.innerHTML = "SHA-256: <code>" + info.sha256 + "</code>";
+    } catch (e) {
+      ver.textContent = "The first build is on its way.";
+    }
+  }
+  fill("desktop/latest.json", "win-ver", "win-dl", "win-sum",
+       (d) => d.platforms && d.platforms["windows-x86_64"] && { url: d.platforms["windows-x86_64"].url, sha256: d.sha256 });
+  fill("android/latest.json", "and-ver", "and-dl", "and-sum", (d) => ({ url: d.url, sha256: d.sha256 }));
+</script>
+</body>
+</html>
