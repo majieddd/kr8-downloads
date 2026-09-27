@@ -1,0 +1,9 @@
+{
+  "version": "0.4.0",
+  "versionCode": 40000,
+  "url": "https://github.com/majieddd/kr8-downloads/releases/download/android-v0.4.0/kr8-android-0.4.0.apk",
+  "sha256": "aed65a400342839d19ea8034e1428c474d9272e02997a1c57d1c213281e1fc38",
+  "size": 133197782,
+  "notes": "kr8 0.4.0 — the first version that updates itself.\n\n- Updates arrive inside the app: kr8 checks for new versions, shows what changed, and installs when you choose Restart to update. Every update is signed and checked before it installs.\n- Android: the phone app shows your spaces and chats, and a view-only picture of each space's canvas boards that stays up to date. It also updates itself from inside the app.\n- Canvas: boards in shared spaces publish a picture to the space so the phone can see them. Switch it off per board with the phone icon in the canvas toolbar.\n- Pairing, onboarding and diagnostics fixes from testing.\n\nIf you had an earlier Android test build, uninstall it once before installing this one.",
+  "minSupportedVersionCode": 0
+}
