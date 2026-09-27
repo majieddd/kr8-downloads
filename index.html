@@ -48,6 +48,12 @@
   ol { color: var(--muted); padding-left: 20px; }
   code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.85em; word-break: break-all; }
   footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
+  .qr { display: flex; gap: 12px; align-items: center; margin-top: 6px; }
+  .qr img { background: #fff; border-radius: 8px; padding: 4px; flex: none; }
+  body.is-phone .qr { display: none; }
+  body.is-phone #android { order: -1; border-color: var(--accent); }
+  .grid { display: flex; flex-wrap: wrap; }
+  .grid > .card { flex: 1 1 260px; }
 </style>
 </head>
 <body>
@@ -64,13 +70,26 @@
       <a class="btn" id="win-dl" href="#" aria-disabled="true">Download for Windows</a>
       <div class="small" id="win-sum"></div>
     </section>
-    <section class="card" aria-labelledby="and-h">
+    <section class="card" id="android" aria-labelledby="and-h">
       <h2 id="and-h">Android</h2>
       <div class="ver" id="and-ver">Checking the latest version…</div>
       <a class="btn" id="and-dl" href="#" aria-disabled="true">Download the APK</a>
       <div class="small" id="and-sum"></div>
+      <div class="qr" id="and-qr">
+        <img src="assets/android-qr.svg" width="132" height="132" alt="QR code linking to this page's Android download">
+        <span class="small">On your computer? Scan this with your phone's camera to open this page on the phone.</span>
+      </div>
     </section>
   </div>
+
+  <h3>Install on Android</h3>
+  <ol>
+    <li>If you installed an earlier kr8 <em>test</em> build, uninstall it first (long-press the app → Uninstall). It was signed with a different key, so Android won't update over it. You only do this once.</li>
+    <li>Tap <strong>Download the APK</strong> above. When the download finishes, open it.</li>
+    <li>If Android asks, allow your browser to <strong>install unknown apps</strong>, then go back and tap <strong>Install</strong>.</li>
+    <li>Open kr8 and choose <strong>Scan a QR code</strong>, then on your computer open kr8 → <strong>Settings → Mobile</strong> and scan the code it shows. Check that the six-digit numbers match on both screens.</li>
+    <li>From then on kr8 offers updates itself: <strong>Settings → Updates</strong> on the phone.</li>
+  </ol>
 
   <div class="note">
     <strong>Preview builds.</strong> The Windows installer is not code-signed yet, so Windows may show
@@ -89,6 +108,7 @@
   <footer>kr8 · Ascent Strategy · <a href="https://kr8.app" style="color:var(--accent)">kr8.app</a></footer>
 </main>
 <script>
+  if (/Android|iPhone|iPad|Mobile/i.test(navigator.userAgent)) document.body.classList.add("is-phone");
   async function fill(feed, verId, dlId, sumId, pick) {
     const ver = document.getElementById(verId), dl = document.getElementById(dlId), sum = document.getElementById(sumId);
     try {
