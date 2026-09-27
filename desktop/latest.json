@@ -1,16 +1,16 @@
 {
-  "version": "0.4.0",
-  "notes": "kr8 0.4.0 — the first version that updates itself.\n\n- Updates arrive inside the app: kr8 checks for new versions, shows what changed, and installs when you choose Restart to update. Every update is signed and checked before it installs.\n- Android: the phone app shows your spaces and chats, and a view-only picture of each space's canvas boards that stays up to date. It also updates itself from inside the app.\n- Canvas: boards in shared spaces publish a picture to the space so the phone can see them. Switch it off per board with the phone icon in the canvas toolbar.\n- Pairing, onboarding and diagnostics fixes from testing.\n\nIf you had an earlier Android test build, uninstall it once before installing this one.",
-  "pub_date": "2026-09-27T22:48:35Z",
+  "version": "0.4.1",
+  "notes": "kr8 0.4.1 — a small maintenance release. No changes you will notice; it confirms that kr8 updates itself correctly.",
+  "pub_date": "2026-09-27T23:20:13Z",
   "platforms": {
     "windows-x86_64-nsis": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeERXNzlwVmkwUjRObjBPcDNUYitDUmNKY3RobFpkeXYrdVZ1Yng4cFRlVy9oeElmUlV4bm5rWUxtcno0QVQxWFlrV29HbDlqTHlVVmZ0SXQ3cDlOY2dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNTQ5MzE0CWZpbGU6a3I4XzAuNC4wX3g2NC1zZXR1cC5leGUKbkFuOWppSnJ0TXBxZmVIU3pjNlFEOUZJa2h2NkVnQTh1THZTNUY5Vk9oQThwdHp0WXJuQjJFc1llUG9Sc0NGNU56NHBZUkhjaWtqTEVxODNTOFN1QUE9PQo=",
-      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.0/kr8_0.4.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeEwzbEREeVppL0JRNEZGQVVJY2xxMlJhaEtxL1FUYVkxZ2xTYU5LbmJ2dHpUaDVMaXIxYkFVbi92SkJvVkZUZ3BKM2ZtWXJhbWpFaERMUHJrTU5mbWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNTUxMjEyCWZpbGU6a3I4XzAuNC4xX3g2NC1zZXR1cC5leGUKT2lHYzgzd2xLMHVENjRXWElLYnVvZ3lMZnRTZXd3K2F0MHhSekd4QjFqaTdOMGQ5WU93Z0ZsUFZLZ2lpaEs1Ni9LK2o3aU1qYUNqem9FM3F3MGN2Qmc9PQo=",
+      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.1/kr8_0.4.1_x64-setup.exe"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeERXNzlwVmkwUjRObjBPcDNUYitDUmNKY3RobFpkeXYrdVZ1Yng4cFRlVy9oeElmUlV4bm5rWUxtcno0QVQxWFlrV29HbDlqTHlVVmZ0SXQ3cDlOY2dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNTQ5MzE0CWZpbGU6a3I4XzAuNC4wX3g2NC1zZXR1cC5leGUKbkFuOWppSnJ0TXBxZmVIU3pjNlFEOUZJa2h2NkVnQTh1THZTNUY5Vk9oQThwdHp0WXJuQjJFc1llUG9Sc0NGNU56NHBZUkhjaWtqTEVxODNTOFN1QUE9PQo=",
-      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.0/kr8_0.4.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeEwzbEREeVppL0JRNEZGQVVJY2xxMlJhaEtxL1FUYVkxZ2xTYU5LbmJ2dHpUaDVMaXIxYkFVbi92SkJvVkZUZ3BKM2ZtWXJhbWpFaERMUHJrTU5mbWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNTUxMjEyCWZpbGU6a3I4XzAuNC4xX3g2NC1zZXR1cC5leGUKT2lHYzgzd2xLMHVENjRXWElLYnVvZ3lMZnRTZXd3K2F0MHhSekd4QjFqaTdOMGQ5WU93Z0ZsUFZLZ2lpaEs1Ni9LK2o3aU1qYUNqem9FM3F3MGN2Qmc9PQo=",
+      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.1/kr8_0.4.1_x64-setup.exe"
     }
   },
-  "sha256": "fda6714b05ab74b050b6b96862042bd6e3494d9ef8a81325cf86e27a8cb7c28f"
+  "sha256": "6f1ca610f597bd1d558d890333a4daf628cc8810f9a0136736ed5b18ef65c8a1"
 }
