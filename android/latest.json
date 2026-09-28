@@ -1,9 +1,9 @@
 {
-  "version": "0.4.0",
-  "versionCode": 40000,
-  "url": "https://github.com/majieddd/kr8-downloads/releases/download/android-v0.4.0/kr8-android-0.4.0.apk",
-  "sha256": "aed65a400342839d19ea8034e1428c474d9272e02997a1c57d1c213281e1fc38",
-  "size": 133197782,
-  "notes": "kr8 0.4.0 — the first version that updates itself.\n\n- Updates arrive inside the app: kr8 checks for new versions, shows what changed, and installs when you choose Restart to update. Every update is signed and checked before it installs.\n- Android: the phone app shows your spaces and chats, and a view-only picture of each space's canvas boards that stays up to date. It also updates itself from inside the app.\n- Canvas: boards in shared spaces publish a picture to the space so the phone can see them. Switch it off per board with the phone icon in the canvas toolbar.\n- Pairing, onboarding and diagnostics fixes from testing.\n\nIf you had an earlier Android test build, uninstall it once before installing this one.",
+  "version": "0.4.2",
+  "versionCode": 40200,
+  "url": "https://github.com/majieddd/kr8-downloads/releases/download/android-v0.4.2/kr8-android-0.4.2.apk",
+  "sha256": "e65f15eba4f7aebfa09303b069b91c3dbb1227c27a6ca1bf5f9375c5565d3d55",
+  "size": 133313911,
+  "notes": "kr8 0.4.2\n\n- The phone app now looks like kr8: kr8 colours, logo and wording throughout, with no Buzz look left.\n- Pairing a phone is clearer: kr8 tells you before showing a QR code if your community can't be reached from a phone, and why, instead of a raw \"404\" error. The pairing screen shows exactly where to go on each device.\n- Self-hosted relays can now be reached from your phone: the relay kit runs a pairing service, and an optional \"Reach it from your phone\" step publishes your relay at a public address through a free Cloudflare Tunnel.\n- Safer handling of the Cloudflare tunnel token (never shown after entry, scrubbed from logs).",
   "minSupportedVersionCode": 0
 }
