@@ -1,9 +1,9 @@
 {
-  "version": "0.4.2",
-  "versionCode": 40200,
-  "url": "https://github.com/majieddd/kr8-downloads/releases/download/android-v0.4.2/kr8-android-0.4.2.apk",
-  "sha256": "e65f15eba4f7aebfa09303b069b91c3dbb1227c27a6ca1bf5f9375c5565d3d55",
-  "size": 133313911,
-  "notes": "kr8 0.4.2\n\n- The phone app now looks like kr8: kr8 colours, logo and wording throughout, with no Buzz look left.\n- Pairing a phone is clearer: kr8 tells you before showing a QR code if your community can't be reached from a phone, and why, instead of a raw \"404\" error. The pairing screen shows exactly where to go on each device.\n- Self-hosted relays can now be reached from your phone: the relay kit runs a pairing service, and an optional \"Reach it from your phone\" step publishes your relay at a public address through a free Cloudflare Tunnel.\n- Safer handling of the Cloudflare tunnel token (never shown after entry, scrubbed from logs).",
+  "version": "0.4.3",
+  "versionCode": 40300,
+  "url": "https://github.com/majieddd/kr8-downloads/releases/download/android-v0.4.3/kr8-android-0.4.3.apk",
+  "sha256": "9ae02511f640309313e73267ece97cd17041ee31c53c6ae9198ae5999bf88bd2",
+  "size": 133494879,
+  "notes": "kr8 0.4.3 for Android — open your boards from the phone.\n\n- New Canvas tab: every space that has board pictures, your community's Home board first, with when each was last updated. Tap one to open it full screen and pinch to zoom.\n- Each space's canvas button shows a dot when that space has board pictures, and explains what to do when it doesn't.\n- Boards appear once kr8 on your computer is on 0.4.5 or later.",
   "minSupportedVersionCode": 0
 }
