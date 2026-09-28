@@ -1,16 +1,16 @@
 {
-  "version": "0.4.3",
-  "notes": "kr8 0.4.3 — take your own relay public without starting over.\n\n- A relay you host on this computer can now be moved to a public address (for example relay.kr8.dev through a Cloudflare Tunnel) so your phone can reach it and pair with it. Your community keeps its members, history, files and invites; kr8 takes a backup first and puts everything back if a step fails.\n- This computer follows the move by itself: agents, saved messages, boards, read markers, invites and settings carry over to the new address.\n- Find it under the relay's Manage pane: \"Make this relay reachable from your phone\".",
-  "pub_date": "2026-09-28T05:35:54Z",
+  "version": "0.4.4",
+  "notes": "kr8 0.4.4 — a relay move you can always finish or undo.\n\n- If kr8 closes or the computer restarts in the middle of moving your relay to a public address, the relay's Manage pane now offers \"Check again\": kr8 looks at where things stand and either finishes the move or puts everything back.\n- While a move is running, kr8 asks before closing and holds \"Restart to update\" until the move is done.\n- Before anything stops, kr8 now checks that your address really points to your Cloudflare tunnel, so a missing or mistyped route is caught up front.",
+  "pub_date": "2026-09-28T07:19:29Z",
   "platforms": {
     "windows-x86_64-nsis": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeEYzdHp2MDZhcHczWkpXd1dLT04wMWI2czlJSnN2VXVCWG1aVDZkOHh2dWVtTmU4ZzU1OEdqdDEzczd3bzNzQm1ETlFxaHMvQVNrU1FTcTltSTJPVncwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNTczNzUzCWZpbGU6a3I4XzAuNC4zX3g2NC1zZXR1cC5leGUKclYydFpHZ2xqUGU2WUkzT2hldVZOenplOWdVaWw1ODlhWjU0ZjFWck1KK1lNQWRMOG9qampLSi9Sc2VkdDdScThwK0lWbGw0V29SUVhJckM1WkhOQnc9PQo=",
-      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.3/kr8_0.4.3_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeEZtblNTKzRjblIwbDhxNUJtRjNLZlMraVFlNGVnWENMUndoL2xsUmF6eHh6M3c0Y1ljYWpjeW5sTHlWRmwwT1pKTUVOSUlwWEx1RGtDZVhGakZJR3cwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNTc5OTY5CWZpbGU6a3I4XzAuNC40X3g2NC1zZXR1cC5leGUKTUtXbCtadVBLZmVTeDNyYWRQajZsSFhBcFo3YmVKVzVoVG1mUmFkVXlVUTdwZW4ya2tzY3EvYTBhdnMrK2hOUjJYSHFJMndBcWk3azB1bjBmODZQQnc9PQo=",
+      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.4/kr8_0.4.4_x64-setup.exe"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeEYzdHp2MDZhcHczWkpXd1dLT04wMWI2czlJSnN2VXVCWG1aVDZkOHh2dWVtTmU4ZzU1OEdqdDEzczd3bzNzQm1ETlFxaHMvQVNrU1FTcTltSTJPVncwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNTczNzUzCWZpbGU6a3I4XzAuNC4zX3g2NC1zZXR1cC5leGUKclYydFpHZ2xqUGU2WUkzT2hldVZOenplOWdVaWw1ODlhWjU0ZjFWck1KK1lNQWRMOG9qampLSi9Sc2VkdDdScThwK0lWbGw0V29SUVhJckM1WkhOQnc9PQo=",
-      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.3/kr8_0.4.3_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeEZtblNTKzRjblIwbDhxNUJtRjNLZlMraVFlNGVnWENMUndoL2xsUmF6eHh6M3c0Y1ljYWpjeW5sTHlWRmwwT1pKTUVOSUlwWEx1RGtDZVhGakZJR3cwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNTc5OTY5CWZpbGU6a3I4XzAuNC40X3g2NC1zZXR1cC5leGUKTUtXbCtadVBLZmVTeDNyYWRQajZsSFhBcFo3YmVKVzVoVG1mUmFkVXlVUTdwZW4ya2tzY3EvYTBhdnMrK2hOUjJYSHFJMndBcWk3azB1bjBmODZQQnc9PQo=",
+      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.4/kr8_0.4.4_x64-setup.exe"
     }
   },
-  "sha256": "48027f1a032fbddd70c03d2950f77d3251730279d940c8e5c6f488756693c655"
+  "sha256": "a2b8cb8e33ad3569f94e658b7c317ef22bb16cbba4caf767c82ad12a16b9e7ac"
 }
