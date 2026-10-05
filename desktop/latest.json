@@ -1,16 +1,15 @@
 {
-  "version": "0.4.5",
-  "notes": "kr8 0.4.5 — boards on your phone, and no more stuck agents.\n\n- Your boards now show on your phone by default, including your community's Home board (in #home). Pictures refresh about a minute after a board changes. Switch it off per board with the phone icon in the canvas toolbar.\n- Stopping or switching agents on Windows can no longer freeze kr8. If an agent is slow to stop, kr8 says so and lets you try again.\n- Agents answer faster, and a person's message is never dropped from an agent's context in favour of agent chatter.\n- Smaller fixes: board pictures no longer go to the previous community after you switch, \"space\" wording throughout, and follow-ups to moving a relay to a public address.",
-  "pub_date": "2026-09-28T19:13:15Z",
+  "version": "0.4.6",
+  "notes": "kr8 0.4.6 — a new board engine, references in chat, and live boards to try.\n\n- Boards now run on a new engine that keeps every edit, even when two people or an agent change the same board at once. Your boards move over by themselves the first time you open them; the old files are kept.\n- Point at canvas items in chat: select something on a board and it can go into your message as a reference. \"Include canvas selection\" is on in the canvas chat and can be switched off with one click.\n- A `kr8` command now installs beside `buzz`.\n- Dimmed text is easier to read in dark themes.\n- Live boards (early preview, off by default): see each other's cursors and edits on shared boards as they happen. Turn it on under Preview features (\"Live boards\").\n\nNot in this update yet: live boards on the phone, and the move of kr8's downloads to kr8.app. Live boards on the desktop are an early preview: a newly made board can take up to two minutes to appear on a second computer.",
+  "pub_date": "2026-10-05T22:37:02Z",
   "platforms": {
     "windows-x86_64-nsis": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeExidUVhTHBvbDZ6SmRhZ1BQS3lTYm5IeDcrZS9Sa3ozV2t0MGllTVdWaUNCcHkxZ2pSUVRNVWVSTzAyNUVpLy9qc09VcnM5aUlpbkN1Qy9rYXdRaFEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNjIyNzk0CWZpbGU6a3I4XzAuNC41X3g2NC1zZXR1cC5leGUKQnFiS1FMYzZtcEtZYzMxT2ZEUTU0bVFZWnJIU3pBc0FiSVdKbEcxRk9oR0xDZWRIQmJMQVdibEVIN1NyTDBTRXRIK1o0alVXWktLVEQzcHlMeXlTREE9PQo=",
-      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.5/kr8_0.4.5_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeEtzakl2N0o3WHoxRmFTYzFyOW5neUVCQXUxWVJxc0d6bHpzbEM1clA4enE5S3BicUREVkFuMi9jVGZybnR0Z1N1Z29qckRKQ2ZqWTc2UFFacWdxZlFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMjM5ODIxCWZpbGU6a3I4XzAuNC42X3g2NC1zZXR1cC5leGUKeTFTaEpmRFNFWXlWc3BueWNoTFFLOVBOL09lK0g5eXdpVXN0RzFseGFLMWFDMUNJYnk5N0ZFcHNrckZxajBpajR1eloxNkZuREFCdWM4TW1JUVI2REE9PQo=",
+      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.6/kr8_0.4.6_x64-setup.exe"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeExidUVhTHBvbDZ6SmRhZ1BQS3lTYm5IeDcrZS9Sa3ozV2t0MGllTVdWaUNCcHkxZ2pSUVRNVWVSTzAyNUVpLy9qc09VcnM5aUlpbkN1Qy9rYXdRaFEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNjIyNzk0CWZpbGU6a3I4XzAuNC41X3g2NC1zZXR1cC5leGUKQnFiS1FMYzZtcEtZYzMxT2ZEUTU0bVFZWnJIU3pBc0FiSVdKbEcxRk9oR0xDZWRIQmJMQVdibEVIN1NyTDBTRXRIK1o0alVXWktLVEQzcHlMeXlTREE9PQo=",
-      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.5/kr8_0.4.5_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSaVFXOVlqeitKeEtzakl2N0o3WHoxRmFTYzFyOW5neUVCQXUxWVJxc0d6bHpzbEM1clA4enE5S3BicUREVkFuMi9jVGZybnR0Z1N1Z29qckRKQ2ZqWTc2UFFacWdxZlFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMjM5ODIxCWZpbGU6a3I4XzAuNC42X3g2NC1zZXR1cC5leGUKeTFTaEpmRFNFWXlWc3BueWNoTFFLOVBOL09lK0g5eXdpVXN0RzFseGFLMWFDMUNJYnk5N0ZFcHNrckZxajBpajR1eloxNkZuREFCdWM4TW1JUVI2REE9PQo=",
+      "url": "https://github.com/majieddd/kr8-downloads/releases/download/desktop-v0.4.6/kr8_0.4.6_x64-setup.exe"
     }
-  },
-  "sha256": "0745a53f3d56e7e37b2097b4f5e809018d46df7c7cd2ee8a086d5a3a9097201f"
+  }
 }
