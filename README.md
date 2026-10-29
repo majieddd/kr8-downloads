@@ -5,8 +5,10 @@ It holds no source code.
 
 - `desktop/latest.json` is the Windows update feed that installed copies of kr8 read.
 - `android/latest.json` is the Android update feed that the kr8 app reads.
+- `apple/latest.json` tells the download page where the newest Mac DMG and iPhone IPA are, with
+  their SHA-256. No installed app reads it: the Mac and iPhone builds do not update themselves yet.
 - Installers and APKs are attached to this repository's GitHub Releases, one release per version:
-  `desktop-vX.Y.Z` and `android-vX.Y.Z`.
+  `desktop-vX.Y.Z`, `android-vX.Y.Z`, `macos-vX.Y.Z` and `ios-vX.Y.Z`.
 
 The site used to be **https://downloads.kr8.dev**. That name now forwards here (a redirect on the
 kr8.dev Cloudflare zone), because Windows 0.4.4 and earlier and Android 0.4.2 and earlier read their
@@ -15,8 +17,9 @@ forwarding until installs have moved (see `docs/kr8/session7/KR8-APP-MIGRATION.m
 repository).
 
 Every desktop update is signed with kr8's updater key, and installed copies refuse an update whose
-signature does not verify. Every APK is signed with kr8's release key. The SHA-256 of each file is
-listed on the download page and in its feed.
+signature does not verify. Every APK is signed with kr8's release key. The Mac DMG is ad-hoc signed
+(no Apple Developer ID or notarization yet) and the iPhone IPA is unsigned, for sideloading. The
+SHA-256 of each file is listed on its release page, and for Android and Apple in its feed.
 
 Releases are produced by `scripts/kr8/release-desktop.mjs` and `mobile/scripts/` in the private
 kr8 repository. Do not edit the feeds by hand.
