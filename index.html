@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Download kr8</title>
-<meta name="description" content="Download kr8 for Windows and Android. Invite-only preview.">
+<meta name="description" content="Download kr8 for Windows, macOS, Android and iPhone. Invite-only preview.">
 <link rel="icon" href="assets/favicon-32.png">
 <link rel="canonical" href="https://downloads.kr8.app/">
 <style>
@@ -52,9 +52,9 @@
   .qr { display: flex; gap: 12px; align-items: center; margin-top: 6px; }
   .qr img { background: #fff; border-radius: 8px; padding: 4px; flex: none; }
   body.is-phone .qr { display: none; }
-  body.is-phone #android { order: -1; border-color: var(--accent); }
+  body.is-android #android, body.is-ios #ios, body.is-mac #mac { order: -1; border-color: var(--accent); }
   .grid { display: flex; flex-wrap: wrap; }
-  .grid > .card { flex: 1 1 260px; }
+  .grid > .card { flex: 1 1 360px; }
 </style>
 </head>
 <body>
@@ -71,6 +71,12 @@
       <a class="btn" id="win-dl" href="#" aria-disabled="true">Download for Windows</a>
       <div class="small" id="win-sum"></div>
     </section>
+    <section class="card" id="mac" aria-labelledby="mac-h">
+      <h2 id="mac-h">macOS</h2>
+      <div class="ver" id="mac-ver">Checking the latest version…</div>
+      <a class="btn" id="mac-dl" href="#" aria-disabled="true">Download for Mac</a>
+      <div class="small" id="mac-sum">For Macs with Apple silicon (M1 or later).</div>
+    </section>
     <section class="card" id="android" aria-labelledby="and-h">
       <h2 id="and-h">Android</h2>
       <div class="ver" id="and-ver">Checking the latest version…</div>
@@ -81,7 +87,22 @@
         <span class="small">On your computer? Scan this with your phone's camera to open this page on the phone.</span>
       </div>
     </section>
+    <section class="card" id="ios" aria-labelledby="ios-h">
+      <h2 id="ios-h">iPhone</h2>
+      <div class="ver" id="ios-ver">Checking the latest version…</div>
+      <a class="btn" id="ios-dl" href="#" aria-disabled="true">Download the IPA</a>
+      <div class="small" id="ios-sum">For sideloading with Sideloadly or AltStore. iOS 16 or later.</div>
+    </section>
   </div>
+
+  <h3>Install on a Mac</h3>
+  <ol>
+    <li>Click <strong>Download for Mac</strong> above and open the downloaded <code>.dmg</code>.</li>
+    <li>Drag <strong>kr8</strong> into <strong>Applications</strong>.</li>
+    <li>This build is not signed with an Apple Developer ID yet, so macOS refuses to open it. If you already tried, macOS showed “kr8 Not Opened” with <strong>Move to Trash</strong> as the default button: click <strong>Done</strong> instead. Then open <strong>Terminal</strong> and run this once:<br><code>xattr -cr /Applications/kr8.app</code></li>
+    <li>Open kr8 from Applications. On first launch macOS asks whether kr8 may use its keychain item. Enter your Mac's login password and choose <strong>Always Allow</strong>. The window appears after you answer; if it seems slow to open, look for that prompt behind other windows.</li>
+    <li>kr8 does not update itself on a Mac yet. For a new version, download it here again, replace the app in Applications and repeat steps 3 and 4.</li>
+  </ol>
 
   <h3>Install on Android</h3>
   <ol>
@@ -92,10 +113,21 @@
     <li>From then on kr8 offers updates itself: <strong>Settings → Updates</strong> on the phone.</li>
   </ol>
 
+  <h3>Install on an iPhone</h3>
+  <ol>
+    <li>This build is not in the App Store or TestFlight yet. You install it from a computer with <a href="https://sideloadly.io" style="color:var(--accent)">Sideloadly</a> or <a href="https://altstore.io" style="color:var(--accent)">AltStore</a> (Windows or Mac) and your own Apple ID.</li>
+    <li>Download the <code>.ipa</code> above on that computer. Connect the iPhone with a cable, drop the <code>.ipa</code> into Sideloadly or AltStore and sign in with your Apple ID when it asks.</li>
+    <li>On the iPhone, turn on <strong>Settings → Privacy &amp; Security → Developer Mode</strong> and restart when it asks. Then trust your Apple ID under <strong>Settings → General → VPN &amp; Device Management</strong>.</li>
+    <li>Open kr8 and pair it the same way as on Android (step 4 above).</li>
+    <li>With a free Apple ID the app stops opening after 7 days. Install it again the same way to renew it. kr8 does not update itself on an iPhone, and notifications are off in this build.</li>
+  </ol>
+
   <div class="note">
     <strong>Preview builds.</strong> The Windows installer is not code-signed yet, so Windows may show
     “Windows protected your PC”. Choose <em>More info → Run anyway</em> only after checking the file's
-    SHA-256 against the one listed here. The Android app installs outside the Play Store: your phone will ask
+    SHA-256 against the one on its release page (linked under the button). The Mac app is not signed with an
+    Apple Developer ID or notarized, and the iPhone app is unsigned until your own Apple ID signs it, so check
+    their SHA-256 the same way. The Android app installs outside the Play Store: your phone will ask
     you to allow installs from your browser once.
   </div>
 
@@ -103,13 +135,19 @@
   <ol>
     <li>Open kr8 on your computer and join your community with the invite you were given.</li>
     <li>On your phone, open kr8 and pair it from <em>Settings → Mobile</em> on the computer.</li>
-    <li>Both apps check this page for updates and offer them inside the app.</li>
+    <li>The Windows and Android apps check this page for updates and offer them inside the app. On a Mac or an iPhone, download the new version here.</li>
   </ol>
 
   <footer>kr8 · LaTech · <a href="https://kr8.app" style="color:var(--accent)">kr8.app</a></footer>
 </main>
 <script>
-  if (/Android|iPhone|iPad|Mobile/i.test(navigator.userAgent)) document.body.classList.add("is-phone");
+  const ua = navigator.userAgent;
+  // iPadOS Safari reports itself as a Mac; touch points tell the two apart.
+  const isIos = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (/Android|iPhone|iPad|Mobile/i.test(ua) || isIos) document.body.classList.add("is-phone");
+  if (/Android/i.test(ua)) document.body.classList.add("is-android");
+  else if (isIos) document.body.classList.add("is-ios");
+  else if (/Macintosh/.test(ua)) document.body.classList.add("is-mac");
   async function fill(feed, verId, dlId, sumId, pick) {
     const ver = document.getElementById(verId), dl = document.getElementById(dlId), sum = document.getElementById(sumId);
     try {
@@ -120,13 +158,24 @@
       if (!info || !info.url) throw new Error("no build yet");
       ver.textContent = "Version " + data.version + (data.pub_date ? " · " + new Date(data.pub_date).toLocaleDateString() : "");
       dl.href = info.url; dl.removeAttribute("aria-disabled");
-      if (info.sha256) sum.innerHTML = "SHA-256: <code>" + info.sha256 + "</code>";
+      const note = info.sumNote ? info.sumNote + " " : "";
+      if (/^[0-9a-f]{64}$/.test(info.sha256 || "")) sum.innerHTML = note + "SHA-256: <code>" + info.sha256 + "</code>";
+      else if (info.page) sum.innerHTML = note + '<a href="' + info.page + '">SHA-256 and signature</a>';
     } catch (e) {
       ver.textContent = "The first build is on its way.";
     }
   }
+  // The desktop feed carries no SHA-256; the release page beside each asset lists it.
+  function releaseAsset(url) {
+    return { url, page: url.replace("/releases/download/", "/releases/tag/").replace(/\/[^/]+$/, "") };
+  }
   fill("desktop/latest.json", "win-ver", "win-dl", "win-sum",
-       (d) => d.platforms && d.platforms["windows-x86_64"] && { url: d.platforms["windows-x86_64"].url, sha256: d.sha256 });
+       (d) => d.platforms && d.platforms["windows-x86_64"] && releaseAsset(d.platforms["windows-x86_64"].url));
+  // apple/latest.json lists the Mac DMG and the iPhone IPA for this page only; no installed app reads it.
+  fill("apple/latest.json", "mac-ver", "mac-dl", "mac-sum",
+       (d) => d.macos && { url: d.macos.url, sha256: d.macos.sha256, sumNote: "For Macs with Apple silicon (M1 or later)." });
+  fill("apple/latest.json", "ios-ver", "ios-dl", "ios-sum",
+       (d) => d.ios && { url: d.ios.url, sha256: d.ios.sha256, sumNote: "For sideloading, iOS 16 or later." });
   fill("android/latest.json", "and-ver", "and-dl", "and-sum", (d) => ({ url: d.url, sha256: d.sha256 }));
 </script>
 </body>
