@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LFM3 Home for Android</title>
-<meta name="description" content="A local AI agent for Android. Runs Liquid AI's LFM3-1.7B on your phone with tools for files, a shell, web search, memory and a preview pane.">
+<title>LFM3 Home</title>
+<meta name="description" content="A local AI agent for Windows and Android. Runs Liquid AI's LFM3 models on your own device with tools for files, a shell, web search, memory and a preview pane.">
 <link rel="icon" href="icon.png">
 <link rel="canonical" href="https://downloads.kr8.app/lfm3home/">
 <style>
@@ -29,9 +29,10 @@
   header span { color: var(--muted); font-size: 0.9rem; }
   h1 { font-size: 2rem; margin: 24px 0 8px; letter-spacing: -0.01em; }
   .lede { color: var(--muted); margin: 0 0 28px; max-width: 62ch; }
+  .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
   .card {
     background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
-    padding: 20px; display: flex; flex-direction: column; gap: 10px;
+    padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0;
   }
   .card h2 { margin: 0; font-size: 1.15rem; }
   .ver { color: var(--muted); font-size: 0.9rem; }
@@ -52,66 +53,102 @@
     margin-top: 28px; padding: 14px 16px; border-left: 3px solid var(--warn);
     background: var(--panel); border-radius: 8px; color: var(--muted); font-size: 0.92rem;
   }
+  .note p { margin: 0 0 8px; }
+  .note p:last-child { margin: 0; }
   footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
   footer a { color: var(--accent); }
 </style>
 </head>
 <body>
 <main>
-  <header><img src="icon.png" alt=""><span>LFM3 Home · Android</span></header>
-  <h1>LFM3 Home for Android</h1>
-  <p class="lede">A local AI agent that runs Liquid AI's LFM3-1.7B on your phone. It reads and writes files, runs shell
-  commands, searches the web, keeps a task list and long-term notes, and shows pages it builds in a preview pane.
-  The model runs on the phone itself: chats and files stay on the device, and the only network traffic is the
-  one-time model download and web searches the agent makes for you.</p>
+  <header><img src="icon.png" alt=""><span>LFM3 Home · Windows and Android</span></header>
+  <h1>LFM3 Home</h1>
+  <p class="lede">A local AI agent that runs Liquid AI's LFM3 models on your own device. It reads and writes files,
+  runs shell commands, searches the web, keeps a task list and long-term notes, and shows pages it builds in a
+  preview pane. The models run on your PC's GPU or your phone's processor: chats and files stay on the device, and
+  the only network traffic is the one-time model download, web searches the agent makes for you, and update checks.</p>
 
-  <section class="card" aria-labelledby="dl-h">
-    <h2 id="dl-h">Download</h2>
-    <div class="ver">Version 0.1.0 · 30.3 MB · 30 October 2026</div>
-    <a class="btn" href="https://github.com/majieddd/kr8-downloads/releases/download/lfm3home-android-v0.1.0/LFM3-Home-0.1.0.apk">Download the APK</a>
-    <div class="small">SHA-256 <code>e75eecc5bbd23559665afce40f9563247b583c18ec1b00c2f7698b37bfdbf949</code></div>
-  </section>
+  <div class="downloads">
+    <section class="card" aria-labelledby="win-h">
+      <h2 id="win-h">Windows</h2>
+      <div class="ver">Version 0.2.0 · 17.0 MB · 30 October 2026</div>
+      <a class="btn" href="https://github.com/majieddd/kr8-downloads/releases/download/lfm3home-desktop-v0.2.0/LFM3-Home-0.2.0-x64-setup.exe">Download for Windows</a>
+      <div class="small">SHA-256 <code>6ad0d6f5189230c7cdf5eebf799d3e31c8bf107ac23e346dc57c0821dea7f227</code></div>
+    </section>
+    <section class="card" aria-labelledby="and-h">
+      <h2 id="and-h">Android</h2>
+      <div class="ver">Version 0.2.0 · 30.4 MB · 30 October 2026</div>
+      <a class="btn" href="https://github.com/majieddd/kr8-downloads/releases/download/lfm3home-android-v0.2.0/LFM3-Home-0.2.0.apk">Download the APK</a>
+      <div class="small">SHA-256 <code>75457c3cc39ebed0bb2da0145331cb829b43f78a00959f7d6ed84afe3997680e</code></div>
+    </section>
+  </div>
+  <p class="small">Both versions update themselves: when a new version is out, an <strong>Update</strong> button appears
+  at the top of the app. Settings has <strong>Check for updates</strong>.</p>
 
-  <h3>Install</h3>
+  <h3>Install on Windows</h3>
+  <ol>
+    <li>Run <strong>LFM3-Home-0.2.0-x64-setup.exe</strong>. It installs for your user only, without administrator rights.
+      The installer is not code-signed yet, so Windows SmartScreen may ask: choose <strong>More info</strong>, then
+      <strong>Run anyway</strong>.</li>
+    <li>Open LFM3 Home from the Start menu or the desktop. The first launch downloads the models and checks their
+      SHA-256: 1.1 GB for LFM3, plus 1.6 GB for Omni in Team mode. The status pill at the top shows the progress.</li>
+    <li>When the pill says <strong>Ready</strong>, type a task.</li>
+  </ol>
+
+  <h3>Install on Android</h3>
   <ol>
     <li>Tap <strong>Download the APK</strong>, then open the file when the download finishes.</li>
-    <li>If Android asks, allow your browser to <strong>install unknown apps</strong>, go back and tap <strong>Install</strong>.</li>
+    <li>If Android asks, allow your browser to <strong>install unknown apps</strong>, go back and tap <strong>Install</strong>.
+      If you have 0.1.0, this installs over it and keeps your model and chats.</li>
     <li>Open LFM3 Home. The first launch downloads the model (1.1 GB, once; Wi-Fi recommended) and checks its
-      SHA-256 before loading it. The status pill at the top shows the progress.</li>
-    <li>When the pill says <strong>Ready</strong>, type a task. Commands and file writes ask before they run
-      (Approvals: Ask); switch the chip to Auto to let the agent run them directly.</li>
+      SHA-256 before loading it.</li>
+    <li>Later versions install from inside the app: tap <strong>Update</strong>, allow LFM3 Home to install apps the
+      first time Android asks, then confirm Android's update dialog.</li>
   </ol>
+
+  <h3>Models</h3>
+  <table>
+    <tr><th>Mode</th><th>Who answers</th><th>Where</th></tr>
+    <tr><td>Team</td><td>LFM3 1.7B does the work with its tools; LFM3 Omni 2B then checks it (it reads the files, runs the code and looks at pages it built), fixes what is wrong and writes the answer</td><td>Windows (default)</td></tr>
+    <tr><td>LFM3</td><td>LFM3 1.7B alone, with thinking: the fastest</td><td>Windows, Android</td></tr>
+    <tr><td>Omni</td><td>LFM3 Omni 2B alone, no thinking: fine for questions, weaker at multi-step tool work</td><td>Windows</td></tr>
+  </table>
 
   <h3>What it can do</h3>
   <table>
     <tr><th>Tool</th><th>Does</th></tr>
-    <tr><td><code>terminal</code>, <code>process</code></td><td>runs <code>sh</code> commands in the app's workspace; long-running ones in the background</td></tr>
+    <tr><td><code>terminal</code>, <code>process</code></td><td>runs PowerShell (Windows) or <code>sh</code> (Android) commands in the workspace; long-running ones in the background</td></tr>
     <tr><td><code>read_file</code>, <code>write_file</code>, <code>patch</code></td><td>reads with line numbers, creates files, edits exact text</td></tr>
     <tr><td><code>search_files</code></td><td>searches file contents and names in the workspace</td></tr>
     <tr><td><code>web_search</code>, <code>web_extract</code></td><td>DuckDuckGo results and the readable text of a page</td></tr>
     <tr><td><code>todo</code>, <code>memory</code></td><td>a task list for multi-step jobs; notes kept across chats</td></tr>
     <tr><td><code>preview</code></td><td>opens pages, images and files the agent made beside the chat</td></tr>
   </table>
-  <p class="small">The same agent, tools and interface as LFM3 Home for Windows, with the phone's shell (<code>sh</code>) in place of PowerShell.</p>
 
   <h3>Requirements</h3>
   <ul>
-    <li>Android 9 or newer, 64-bit ARM with the ARMv8.2 dot-product extension (most phones from 2019 on).</li>
-    <li>About 2.5 GB of free storage (the app plus the 1.1 GB model).</li>
-    <li>RAM sets the context window: 7 GB or more gets the model's full 262,144 tokens, 5 GB gets 131,072,
+    <li>Windows 10 or 11 (64-bit) with a GPU that has a Vulkan driver (NVIDIA, AMD or Intel), about 4 GB of free
+      storage for the app and models, and 12 GB of GPU memory for Team mode at full context (one model needs about 5 GB).</li>
+    <li>Android 9 or newer, 64-bit ARM with the ARMv8.2 dot-product extension (most phones from 2019 on), about 2.5 GB
+      of free storage. RAM sets the context window: 7 GB or more gets the full 262,144 tokens, 5 GB gets 131,072,
       3.5 GB gets 65,536, less gets 32,768.</li>
   </ul>
 
   <div class="note">
-    <strong>Preview build, tested as follows.</strong> On an Android 15 emulator (x86_64, 6 cores, 8 GB of RAM): a fresh install downloads and checks the model, loads the full 262,144-token context, and passes six agent tasks through the real interface (a web page with preview, a shell script written and run, a file edit, a file search, a web search and a memory note) at 8 to 13 tokens a second. The ARM build for phones has not yet been run on a physical device.
-    It installs outside the Play Store, so your phone asks once to allow installs from your browser.
-    Speed depends on the phone's processor; the model runs on the CPU.
+    <p><strong>Preview builds, tested as follows.</strong> Windows (Windows 11, RTX 4080 Laptop, 12 GB): six agent tasks
+    pass in Team mode and with LFM3 alone (Omni alone passes 2 of 6), the real window passes 8 of 8 checks in Team mode,
+    the bundled Vulkan runtime runs LFM3 at about 100 tokens a second, and the Update button took a 0.1.9 install to
+    0.2.0 in 8 seconds. Not yet tested on AMD or Intel GPUs.</p>
+    <p>Android (Android 15 emulator, x86_64, 8 GB): six agent tasks pass at 8 to 13 tokens a second, and the in-app
+    update went from 0.1.9 to 0.2.0 through Android's own update dialog with the model kept. The ARM build has not yet
+    been run on a physical phone. Speed depends on the phone's processor; the model runs on the CPU.</p>
   </div>
 
   <footer>
-    LFM3 Home is unofficial and not affiliated with Liquid AI or the llama.cpp project. The model is
-    <a href="https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF">LiquidAI/LFM3-1.7B-GGUF</a>, downloaded from Hugging Face under
-    Liquid AI's license; inference is <a href="https://github.com/ggml-org/llama.cpp">llama.cpp</a> (MIT).
+    LFM3 Home is unofficial and not affiliated with Liquid AI or the llama.cpp project. The models are
+    <a href="https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF">LiquidAI/LFM3-1.7B-GGUF</a> and
+    <a href="https://huggingface.co/LiquidAI/LFM3-Omni-2B-GGUF">LiquidAI/LFM3-Omni-2B-GGUF</a>, downloaded from
+    Hugging Face under Liquid AI's license; inference is <a href="https://github.com/ggml-org/llama.cpp">llama.cpp</a> (MIT).
     Hosted on <a href="https://downloads.kr8.app/">downloads.kr8.app</a>.
   </footer>
 </main>

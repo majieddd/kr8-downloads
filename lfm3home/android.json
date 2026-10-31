@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0",
+  "versionCode": 2000,
+  "url": "https://github.com/majieddd/kr8-downloads/releases/download/lfm3home-android-v0.2.0/LFM3-Home-0.2.0.apk",
+  "sha256": "75457c3cc39ebed0bb2da0145331cb829b43f78a00959f7d6ed84afe3997680e",
+  "size": 31881442,
+  "notes": "LFM3 Home 0.2.0: updates from inside the app; on Windows a two-model team (LFM3 plus Omni) and an installer that brings its own llama.cpp runtime."
+}
