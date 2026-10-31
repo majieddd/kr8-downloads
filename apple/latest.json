@@ -1,12 +1,12 @@
 {
-  "version": "0.5.0",
-  "pub_date": "2026-10-30T20:30:54Z",
+  "version": "0.5.1",
+  "pub_date": "2026-10-31T04:31:53Z",
   "macos": {
-    "url": "https://github.com/majieddd/kr8-downloads/releases/download/macos-v0.5.0/kr8_0.5.0_aarch64.dmg",
-    "sha256": "c63745b0083b744baaf890a3bbdabd35481630fdce818a1cac03d8ba595cbeed"
+    "url": "https://github.com/majieddd/kr8-downloads/releases/download/macos-v0.5.1/kr8_0.5.1_aarch64.dmg",
+    "sha256": "ce92851fe092873208f99be88e05147ffba111b928ac90b817ffed7eb764170b"
   },
   "ios": {
-    "url": "https://github.com/majieddd/kr8-downloads/releases/download/ios-v0.5.0/kr8_0.5.0_ios_unsigned.ipa",
-    "sha256": "a5b1917e3d2f98c4ffa1098d4bd16774b919d180fb1727fc201366809a427b80"
+    "url": "https://github.com/majieddd/kr8-downloads/releases/download/ios-v0.5.1/kr8_0.5.1_ios_unsigned.ipa",
+    "sha256": "5cf8f973e44c2e93e834038012f3eb6afb54111e596b243eaaaf2e8d99dbc95b"
   }
 }
