@@ -71,9 +71,9 @@
   <div class="downloads">
     <section class="card" aria-labelledby="win-h">
       <h2 id="win-h">Windows</h2>
-      <div class="ver">Version 0.2.0 · 17.0 MB · 30 October 2026</div>
-      <a class="btn" href="https://github.com/majieddd/kr8-downloads/releases/download/lfm3home-desktop-v0.2.0/LFM3-Home-0.2.0-x64-setup.exe">Download for Windows</a>
-      <div class="small">SHA-256 <code>6ad0d6f5189230c7cdf5eebf799d3e31c8bf107ac23e346dc57c0821dea7f227</code></div>
+      <div class="ver">Version 0.3.0 · 17.1 MB · 31 October 2026</div>
+      <a class="btn" href="https://github.com/majieddd/kr8-downloads/releases/download/lfm3home-desktop-v0.3.0/LFM3-Home-0.3.0-x64-setup.exe">Download for Windows</a>
+      <div class="small">SHA-256 <code>ad0a2f53da31b742d2c9860029fe3b9748d6460e0bab3ce698a684419c47b76f</code></div>
     </section>
     <section class="card" aria-labelledby="and-h">
       <h2 id="and-h">Android</h2>
@@ -87,13 +87,20 @@
 
   <h3>Install on Windows</h3>
   <ol>
-    <li>Run <strong>LFM3-Home-0.2.0-x64-setup.exe</strong>. It installs for your user only, without administrator rights.
+    <li>Run <strong>LFM3-Home-0.3.0-x64-setup.exe</strong>. It installs for your user only, without administrator rights.
       The installer is not code-signed yet, so Windows SmartScreen may ask: choose <strong>More info</strong>, then
       <strong>Run anyway</strong>.</li>
     <li>Open LFM3 Home from the Start menu or the desktop. The first launch downloads the models and checks their
       SHA-256: 1.1 GB for LFM3, plus 1.6 GB for Omni in Team mode. The status pill at the top shows the progress.</li>
     <li>When the pill says <strong>Ready</strong>, type a task.</li>
   </ol>
+
+  <h3>Use the models from other apps (Windows)</h3>
+  <p>While LFM3 Home runs, other apps on the same PC can use both models through an OpenAI-compatible API, with no
+  API key: LFM3 1.7B at <code>http://127.0.0.1:8080/v1</code> and LFM3 Omni 2B at <code>http://127.0.0.1:8081/v1</code>.
+  Hermes Agent, for example, can use them as custom providers. Closing the window keeps them running in the tray, and
+  a watchdog starts a model again if it stops answering. The <strong>Server</strong> tab shows each model's state, a
+  live log of every request, and switches to turn this off or to start LFM3 Home with Windows.</p>
 
   <h3>Install on Android</h3>
   <ol>
@@ -138,7 +145,8 @@
     <p><strong>Preview builds, tested as follows.</strong> Windows (Windows 11, RTX 4080 Laptop, 12 GB): six agent tasks
     pass in Team mode and with LFM3 alone (Omni alone passes 2 of 6), the real window passes 8 of 8 checks in Team mode,
     the bundled Vulkan runtime runs LFM3 at about 100 tokens a second, and the Update button took a 0.1.9 install to
-    0.2.0 in 8 seconds. Not yet tested on AMD or Intel GPUs.</p>
+    0.3.0 in under 7 seconds. Hermes Agent answered through both models, and a model server that was killed was
+    answering again 8 seconds later. Not yet tested on AMD or Intel GPUs.</p>
     <p>Android (Android 15 emulator, x86_64, 8 GB): six agent tasks pass at 8 to 13 tokens a second, and the in-app
     update went from 0.1.9 to 0.2.0 through Android's own update dialog with the model kept. The ARM build has not yet
     been run on a physical phone. Speed depends on the phone's processor; the model runs on the CPU.</p>

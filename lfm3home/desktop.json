@@ -1,11 +1,11 @@
 {
-  "version": "0.2.0",
-  "notes": "LFM3 Home 0.2.0: updates from inside the app; on Windows a two-model team (LFM3 plus Omni) and an installer that brings its own llama.cpp runtime.",
-  "pub_date": "2026-10-31T00:12:23Z",
+  "version": "0.3.0",
+  "notes": "LFM3 Home 0.3.0: serves both models to other apps on this PC (such as Hermes), keeps running in the tray, restarts a model server that stops answering, can start with Windows, and has a Server tab with a live activity log.",
+  "pub_date": "2026-10-31T08:02:30Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURlRkRk4xSTRKRk9nOW4rVjlnYlZ6ejErSWUxQjQ2V1ozNU5YdUhXZTg4UW8zWnN4Y0pyWlhIeDlEQ2pFMlhYbklTOUw0SStWRDJEOHIyKzZkc2d2WGQxNFpCUDU5TEFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNDAzOTk2CWZpbGU6TEZNMyBIb21lXzAuMi4wX3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjIuMApqbUl0OWkxd0ZSdVlCT1RCdUJTYkN0aFdWT0l0ditYcUdwdlFrQlZ1SWp5WEpWTldKUmh3SkRuVVlySzdrNU9xUUwxTlg5akd2cWg5WWdTSS9TY2hBQT09Cg==",
-      "url": "https://github.com/majieddd/kr8-downloads/releases/download/lfm3home-desktop-v0.2.0/LFM3-Home-0.2.0-x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURlRkRk4xSTRKRkQwZ0ZoWjJsSFBwbWdJU3h6NzVRbWRVMjNxTHNrdnZQaEkwMldXMHY2UHYzNGdtNVBYZlNCUHdIdnlYZmRRS21JKzNQRU80ZEFaMzBScGJqdzJpelFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNDMzNTU3CWZpbGU6TEZNMyBIb21lXzAuMy4wX3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjMuMApST0J6VmVTRWlURFpMZWt3bTBHcGVqUG9ZaFdhTmdueDBQaXNFRzBGNGlTdEpPS2NhTVNoclhUc3JDUDNTbmNCYWFFZ1dJaVZxWnZ6Y0dCMVFlQzBEZz09Cg==",
+      "url": "https://github.com/majieddd/kr8-downloads/releases/download/lfm3home-desktop-v0.3.0/LFM3-Home-0.3.0-x64-setup.exe"
     }
   }
 }
