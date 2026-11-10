@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8gent</title>
+<meta name="description" content="One local endpoint in front of any model loader: llama.cpp, TensorFold, uzu, Ollama, LM Studio, Strata. Choose a loader and a model; your apps keep the same address.">
+<link rel="icon" href="icon.png">
+<link rel="canonical" href="https://downloads.kr8.app/8gent/">
+<style>
+  :root {
+    --bg: #0a0a0e;
+    --panel: #15142a;
+    --line: #2b2a45;
+    --ink: #e7e8ee;
+    --muted: #a9abbd;
+    --accent: #e7e8ee;
+    --accent-ink: #14141c;
+    --link: #b3a4f7;
+    --warn: #e3b341;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; color: var(--ink);
+    background: linear-gradient(180deg, #0a0a0e, #110e30) fixed;
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+  header { display: flex; align-items: center; gap: 14px; }
+  header img { width: 56px; height: 56px; border-radius: 13px; display: block; }
+  header span { color: var(--muted); font-size: 0.9rem; }
+  h1 { font-size: 2rem; margin: 24px 0 8px; letter-spacing: -0.02em; }
+  .lede { color: var(--muted); margin: 0 0 28px; max-width: 64ch; }
+  .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0;
+  }
+  .card h2 { margin: 0; font-size: 1.15rem; }
+  .ver { color: var(--muted); font-size: 0.9rem; }
+  .btn {
+    display: inline-block; align-self: flex-start; text-align: center; text-decoration: none; font-weight: 600;
+    background: var(--accent); color: var(--accent-ink); padding: 11px 16px; border-radius: 10px;
+  }
+  .btn:hover { background: #ffffff; }
+  .btn:focus-visible, a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+  .small { font-size: 0.85rem; color: var(--muted); }
+  code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.85em; word-break: break-all; }
+  h3 { margin: 36px 0 8px; font-size: 1.05rem; }
+  p { color: var(--muted); max-width: 70ch; }
+  ol, ul { color: var(--muted); padding-left: 20px; max-width: 70ch; }
+  li { margin: 4px 0; }
+  li strong, li code, p strong, p code { color: var(--ink); }
+  a { color: var(--link); }
+  .scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; color: var(--muted); }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--ink); font-weight: 600; }
+  .note {
+    margin-top: 28px; padding: 14px 16px; border: 1px solid var(--line);
+    background: var(--panel); border-radius: 10px; font-size: 0.92rem;
+  }
+  .note p { margin: 0 0 8px; max-width: none; }
+  .note p:last-child { margin: 0; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <header><img src="icon.png" alt=""><span>8gent · macOS, Windows and Linux · part of the kr8 family</span></header>
+  <h1>8gent</h1>
+  <p class="lede">One local endpoint in front of any model loader. You choose a loader (llama.cpp, TensorFold, uzu,
+  Ollama, LM Studio, Strata) and a model; Hermes, kr8 and every other app keep the same address whatever you
+  choose: <code>http://127.0.0.1:8436/v1</code>. The models run on your own computer.</p>
+
+  <div class="downloads">
+    <section class="card" aria-labelledby="mac-h">
+      <h2 id="mac-h">macOS</h2>
+      <div class="ver">Version 0.1.0 · 4.6 MB · 10 November 2026 · Apple Silicon</div>
+      <a class="btn" href="https://github.com/majieddd/8gent/releases/download/v0.1.0/8gent-0.1.0-macos-arm64.dmg">Download for Mac</a>
+      <div class="small">SHA-256 <code>a7598e5ccd3487c860a258973ab08463828e6793555ca01b99c06af02a3202ce</code></div>
+    </section>
+    <section class="card" aria-labelledby="win-h">
+      <h2 id="win-h">Windows</h2>
+      <div class="ver">Version 0.1.0 · 3.3 MB · 10 November 2026 · 64-bit</div>
+      <a class="btn" href="https://github.com/majieddd/8gent/releases/download/v0.1.0/8gent-0.1.0-windows-x64-setup.exe">Download for Windows</a>
+      <div class="small">SHA-256 <code>dbd59b8cfea2a7029fe6cbc93d106aa3aa3c4b3f0a2ed95e2ec2bda3ad3085b3</code></div>
+    </section>
+    <section class="card" aria-labelledby="lin-h">
+      <h2 id="lin-h">Linux</h2>
+      <div class="ver">Version 0.1.0 · 83.1 MB · 10 November 2026 · 64-bit AppImage</div>
+      <a class="btn" href="https://github.com/majieddd/8gent/releases/download/v0.1.0/8gent-0.1.0-linux-x64.AppImage">Download the AppImage</a>
+      <div class="small">SHA-256 <code>6e140e9a3779b299514b821f3cc0374a371af170f57d658a537888e58b727ab6</code></div>
+      <div class="small">Or the <a href="https://github.com/majieddd/8gent/releases/download/v0.1.0/8gent-0.1.0-linux-x64.deb">.deb package</a> (4.7 MB).</div>
+    </section>
+  </div>
+  <p class="small">Every file, the service program on its own, and the source are on
+  <a href="https://github.com/majieddd/8gent/releases/latest">GitHub</a>. The app looks for a newer version itself
+  (Settings &gt; Updates); on macOS it installs it.</p>
+
+  <h3>What it does</h3>
+  <ul>
+    <li><strong>One model, several loaders.</strong> A model you have as GGUF, as MLX and as a uzu folder is one
+      entry. For the model you pick, each loader that can run it shows its measured speed, the memory it needs at the
+      context window you choose, and what it can do. One press switches; if the new engine does not load, 8gent goes
+      back to what was running and shows the engine's own reason.</li>
+    <li><strong>The same behaviour from every loader.</strong> The real context window in the model list, one standard
+      "prompt too long" error (so agents compress and retry), thinking on or off the way each engine takes it.</li>
+    <li><strong>Memory.</strong> Loads on demand, unloads when idle, knows what Ollama is holding and refuses a load
+      that clearly cannot fit beside it (you can insist). A small model can stay loaded as <code>8gent-small</code>.</li>
+    <li><strong>Engine updates.</strong> A daily look for a newer llama.cpp, TensorFold and uzu, installed when idle. A
+      version that needs a newer macOS than you have is held, with the reason.</li>
+    <li><strong>The app.</strong> Home, Chat, Models, Loaders, Monitor, Requests, Logs and Settings. The service keeps
+      running when the window is closed, and can start at login.</li>
+  </ul>
+
+  <h3>Install</h3>
+  <ol>
+    <li><strong>macOS:</strong> open the <code>.dmg</code> and drag 8gent to Applications. The app is not signed with an
+      Apple Developer ID yet: the first time, right-click it and choose <strong>Open</strong>, or allow it under System
+      Settings &gt; Privacy &amp; Security.</li>
+    <li><strong>Windows:</strong> run the installer. It is not code-signed yet, so SmartScreen asks: choose
+      <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+    <li><strong>Linux:</strong> make the AppImage executable and run it, or install the <code>.deb</code>.</li>
+    <li>8gent needs at least one loader and a model. On a Mac, <code>brew install llama.cpp</code> and any GGUF file in
+      LM Studio's model folder is enough. Open <strong>Models</strong>, pick one, and press <strong>Switch</strong>.</li>
+  </ol>
+
+  <h3>Coming from uzu Home or TensorFold Home</h3>
+  <p>On its first run 8gent takes over the Home app's selected model, context window, network sharing and memory
+  mode, and answers on the Home app's port too, so Hermes and anything else pointed there keeps working. Switch the
+  Home app's endpoint and daily updates off first, so that only one of them holds the model; the steps are in the
+  <a href="https://github.com/majieddd/8gent#the-app">README</a>.</p>
+
+  <h3>Loaders</h3>
+  <div class="scroll">
+  <table>
+    <tr><th>Loader</th><th>How 8gent uses it</th><th>Runs</th></tr>
+    <tr><td>llama.cpp</td><td>starts <code>llama-server</code></td><td>GGUF files</td></tr>
+    <tr><td>TensorFold</td><td>starts <code>tensorfold serve</code></td><td>MLX builds, on Apple Silicon</td></tr>
+    <tr><td>uzu</td><td>starts uzu's server</td><td>folders converted for uzu, Mirai's builds, on Apple Silicon</td></tr>
+    <tr><td>Ollama</td><td>uses Ollama's running server</td><td>what Ollama has pulled</td></tr>
+    <tr><td>LM Studio</td><td>uses LM Studio's local server</td><td>what LM Studio has loaded</td></tr>
+    <tr><td>Strata</td><td>uses Strata's running server</td><td>Strata's packs</td></tr>
+  </table>
+  </div>
+
+  <div class="note">
+    <p><strong>An early release, tested as follows.</strong> macOS: in daily use on an M5 MacBook with macOS 26.2, with
+    real models on llama.cpp, TensorFold, uzu and Ollama; Hermes Agent answers through it. Built by GitHub and
+    started from these files.</p>
+    <p>Windows and Linux: built by GitHub, where the service's 41 tests pass. Nobody has used these builds yet, and
+    starting at login and self-installing updates are macOS only for now. LM Studio's and Strata's loaders are
+    written but untested.</p>
+  </div>
+
+  <footer>
+    <p>8gent is open source under the MIT licence: <a href="https://github.com/majieddd/8gent">github.com/majieddd/8gent</a>.
+    It is not affiliated with Mirai, TensorFold, llama.cpp, Ollama, LM Studio or Strata.</p>
+  </footer>
+</main>
+</body>
+</html>

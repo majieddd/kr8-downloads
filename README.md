@@ -24,6 +24,11 @@ SHA-256 of each file is listed on its release page, and for Android and Apple in
 Releases are produced by `scripts/kr8/release-desktop.mjs` and `mobile/scripts/` in the private
 kr8 repository. Do not edit the feeds by hand.
 
+`8gent/` is the download page of 8gent (https://downloads.kr8.app/8gent/), the local model service of
+the kr8 family. Its files are not here: they are attached to the releases of
+https://github.com/majieddd/8gent, and the page links to them. Update the page's version, sizes, dates
+and SHA-256 values when 8gent has a new release.
+
 `assets/android-qr.svg` is generated with segno 1.6.6 (installed in `C:/kr8-build/tools/py`). Run
 this from this folder; it writes through a byte buffer so the file keeps LF line endings on Windows:
 
